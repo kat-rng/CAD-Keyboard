@@ -3,48 +3,59 @@
 keyset := "view"
 
 NumpadMult::
-keyset := "sketch"
-return
+{
+    keyset := "sketch"
+}
 
 NumpadDiv::
-keyset := "view"
-return
+{
+    keyset := "view"
+}
 
 NumpadUp::
-if (keyset = "view")
-    Send, ^5 ; Top View
-if (keyset = "sketch")
-    Send, {Esc}
-return
+{
+    if (keyset = "view")
+        Send "^5" ; Top View
+    if (keyset = "sketch")
+        Send "{Esc}"
+}
 
 NumpadRight::
-Send, ^4 ; Right View
-return
+{
+    Send "^4" ; Right View
+}
 
 NumpadLeft::
-Send, ^3 ; Left View
-return
+{
+    Send "^3" ; Left View
+}
 
 NumpadDown::
-Send, ^6 ; Bottom View
-return
+{
+    Send "^6" ; Bottom View
+}
 
 NumpadClear::
-Send, ^1 ; Front View
-return
+{
+    Send "^1" ; Front View
+}
 
 NumpadPgDn::
-Send, ^2 ; Back View
-return
+{
+    Send "^2" ; Back View
+}
 
 NumpadPgUp::
-Send, ^7 ; Isometric
-return
+{
+    Send "^7" ; Isometric
+}
 
 NumpadEnd::
-Send, ^8 ; Normal to selected surface
-return
+{
+    Send "^8" ; Normal to selected surface
+}
 
 NumpadHome::
-Send, ^{Space} ; View selector
-return
+{
+    Send "^{Space}" ; View selector
+}
