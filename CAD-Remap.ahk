@@ -33,6 +33,11 @@ NumpadUp::
 
 }
 
+^Numpad0::
+{
+    MsgBox("(")
+}
+
 NumpadRight::
 {
     Send "^!+6" ; Trim
