@@ -1,24 +1,28 @@
 ﻿#Requires AutoHotkey v2.0
 
-keyset := "view"
+keyset := "sketch"
 
 NumpadMult::
 {
+    global keyset
     keyset := "sketch"
+    MsgBox("Sketching mode")
 }
 
 NumpadDiv::
 {
-    keyset := "view"
+    global keyset
+    keyset := "model"
+    MsgBox("Modeling mode")
 }
 
 NumpadUp::
 {
-    if (keyset = "view")
+    if (keyset = "model")
     {
         Send "^5" ; Top View
     }
-        
+    
     if (keyset = "sketch")
     {
         Send "{Esc}"
