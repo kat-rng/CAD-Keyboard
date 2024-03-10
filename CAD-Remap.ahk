@@ -1,5 +1,8 @@
 ﻿#Requires AutoHotkey v2.0
 
+; Example structure for mapping keys
+; Key1map := Map("sketch", "sketchkey", "model", "modelkey", "assembly", "assemblykey", "drafting", "draftingkey")
+
 keyset := "view"
 
 NumpadMult::
