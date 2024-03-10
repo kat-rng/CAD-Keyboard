@@ -33,7 +33,7 @@ NumpadUp::
 
 }
 
-^Numpad0::
+!Numpad0::
 {
     MsgBox("(")
 }
