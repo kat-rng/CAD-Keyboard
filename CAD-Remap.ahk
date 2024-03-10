@@ -35,7 +35,7 @@ NumpadUp::
 
 NumpadRight::
 {
-    Send "^4" ; Right View
+    Send "^!+6" ; Trim
 }
 
 NumpadLeft::
