@@ -15,9 +15,15 @@ NumpadDiv::
 NumpadUp::
 {
     if (keyset = "view")
+    {
         Send "^5" ; Top View
+    }
+        
     if (keyset = "sketch")
+    {
         Send "{Esc}"
+    }
+
 }
 
 NumpadRight::
