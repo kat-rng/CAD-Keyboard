@@ -29,20 +29,6 @@ NumpadDiv::
     MsgBox("Modeling mode")
 }
 
-NumpadUp::
-{
-    if (keyset = "model")
-    {
-        Send "^5" ; Top View
-    }
-    
-    if (keyset = "sketch")
-    {
-        Send "{Esc}"
-    }
-
-}
-
 !Numpad0::
 {
     global is_parentheses_free
@@ -65,42 +51,47 @@ NumpadUp::
     is_parentheses_free := 1
 }
 
+NumpadUp::
+{
+    Send Key8map[Keyset]
+}
+
 NumpadRight::
 {
-    Send "^!+6" ; Trim
+    Send Key6map[Keyset]
 }
 
 NumpadLeft::
 {
-    Send "^3" ; Left View
+    Send Key4map[Keyset]
 }
 
 NumpadDown::
 {
-    Send "^6" ; Bottom View
+    Send Key2map[Keyset]
 }
 
 NumpadClear::
 {
-    Send "^1" ; Front View
+    Send Key5map[Keyset]
 }
 
 NumpadPgDn::
 {
-    Send "^2" ; Back View
+    Send Key3map[Keyset]
 }
 
 NumpadPgUp::
 {
-    Send "^7" ; Isometric
+    Send Key9map[Keyset]
 }
 
 NumpadEnd::
 {
-    Send "^8" ; Normal to selected surface
+    Send Key1map[Keyset]
 }
 
 NumpadHome::
 {
-    Send Key7map[keyset]
+    Send Key7map[keyset] 
 }
