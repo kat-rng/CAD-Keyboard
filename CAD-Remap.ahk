@@ -47,9 +47,9 @@ NumpadUp::
 {
     if(is_parentheses_free){
         MsgBox("(")
-        is_parentheses_free = false
+        is_parentheses_free := false
         sleep 10
-        is_parentheses_free = True
+        is_parentheses_free := True
     } 
 }
 
@@ -57,9 +57,9 @@ NumpadUp::
 {
     if(is_parentheses_free){
         MsgBox(")")
-        is_parentheses_free = false
+        is_parentheses_free := false
         sleep 10
-        is_parentheses_free = True
+        is_parentheses_free := True
     }
 }
 
