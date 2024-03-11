@@ -12,7 +12,7 @@ Key7map := Map("sketch", "L"   , "model", "^+7", "assembly", "^!7", "draft", "+!
 Key8map := Map("sketch", "^!+8", "model", "^+8", "assembly", "^!8", "draft", "+!8")
 Key9map := Map("sketch", "^!+9", "model", "^+9", "assembly", "^!9", "draft", "+!9")
 
-keyset := "view"
+keyset := "sketch"
 
 NumpadMult::
 {
