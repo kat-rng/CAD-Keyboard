@@ -45,24 +45,24 @@ NumpadUp::
 
 !Numpad0::
 {
+    global is_parentheses_free
     if(is_parentheses_free = 1){
         MsgBox("(")
-        global is_parentheses_free
-        is_parentheses_free := 0
-        sleep 10
-        is_parentheses_free := 1
     } 
+    is_parentheses_free := 0
+    sleep 10
+    is_parentheses_free := 1
 }
 
 !Numpad4::
 {
+    global is_parentheses_free
     if(is_parentheses_free = 0){
         MsgBox(")")
-        global is_parentheses_free
-        is_parentheses_free := 0
-        sleep 10
-        is_parentheses_free := 1
     }
+    is_parentheses_free := 0
+    sleep 10
+    is_parentheses_free := 1
 }
 
 NumpadRight::
