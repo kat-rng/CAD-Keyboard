@@ -100,5 +100,5 @@ NumpadEnd::
 
 NumpadHome::
 {
-    Send "^{Space}" ; View selector
+    Send Key7map[keyset]
 }
