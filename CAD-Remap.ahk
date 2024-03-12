@@ -17,28 +17,36 @@ keyset := "sketch"
 
 NumpadDiv::
 {
-    global keyset
-    keyset := "sketch"
-    MsgBox("Sketching mode")
+    if(GetKeyState("NumLock", "T")) {
+        Send "/"
+    } else {
+        global keyset
+        keyset := "sketch"
+        MsgBox("Sketching mode")
+    }
 }
 
 NumpadMult::
 {
-    global keyset
-    keyset := "model"
-    MsgBox("Modeling mode")
+    if(GetKeyState("NumLock", "T")) {
+        Send "*"
+    } else {
+        global keyset
+        keyset := "model"
+        MsgBox("Modeling mode")
+    }
+
 }
 
 NumpadSub::
 {
-    global keyset
-    keyset := "assembly"
-    MsgBox("Assembly mode")
-
-NumpadAdd::
-{
-    state := GetKeyState("NumLock", "T")
-    MsgBox(state)
+    if(GetKeyState("NumLock", "T")) {
+        Send "-"
+    } else {
+        global keyset
+        keyset := "assembly"
+        MsgBox("Assembly mode")
+    }
 }
 
 !Numpad0::
