@@ -34,6 +34,11 @@ NumpadSub::
     global keyset
     keyset := "assembly"
     MsgBox("Assembly mode")
+
+NumpadAdd::
+{
+    state := GetKeyState("NumLock", "T")
+    MsgBox(state)
 }
 
 !Numpad0::
