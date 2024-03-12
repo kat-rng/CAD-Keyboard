@@ -18,7 +18,7 @@ keyset := "sketch"
 NumpadDiv::
 {
     if(GetKeyState("NumLock", "T")) {
-        Send "(NumpadDiv)"
+        Send "/"
     } else {
         global keyset
         keyset := "sketch"
@@ -29,7 +29,7 @@ NumpadDiv::
 NumpadMult::
 {
     if(GetKeyState("NumLock", "T")) {
-        Send "(NumpadMult)"
+        Send "*"
     } else {
         global keyset
         keyset := "model"
@@ -41,7 +41,7 @@ NumpadMult::
 NumpadSub::
 {
     if(GetKeyState("NumLock", "T")) {
-        Send "(NumpadSub)"
+        Send "-"
     } else {
         global keyset
         keyset := "assembly"
@@ -51,7 +51,7 @@ NumpadSub::
 Launch_App2::
 {
     if(GetKeyState("NumLock", "T")) {
-        Send "(Launch_App2)"
+        Send "{Launch_App2}"
     } else {
         global keyset
         keyset := "draft"
