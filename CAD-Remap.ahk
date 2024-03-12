@@ -15,14 +15,14 @@ Key9map := Map("sketch", "^!+9", "model", "^+9", "assembly", "^!9", "draft", "+!
 is_parentheses_free := 1
 keyset := "sketch"
 
-NumpadMult::
+NumpadDiv::
 {
     global keyset
     keyset := "sketch"
     MsgBox("Sketching mode")
 }
 
-NumpadDiv::
+NumpadMult::
 {
     global keyset
     keyset := "model"
