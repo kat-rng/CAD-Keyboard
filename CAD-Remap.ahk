@@ -48,6 +48,16 @@ NumpadSub::
         MsgBox("Assembly mode")
     }
 }
+Launch_App2::
+{
+    if(GetKeyState("NumLock", "T")) {
+        Send "{Launch_App2}"
+    } else {
+        global keyset
+        keyset := "draft"
+        MsgBox("Drafting mode")
+    }
+}
 
 !Numpad0::
 {
