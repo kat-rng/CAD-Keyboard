@@ -29,6 +29,13 @@ NumpadMult::
     MsgBox("Modeling mode")
 }
 
+NumpadSub::
+{
+    global keyset
+    keyset := "assembly"
+    MsgBox("Assembly mode")
+}
+
 !Numpad0::
 {
     global is_parentheses_free
