@@ -59,6 +59,9 @@ Launch_App2::
     }
 }
 
+PgDn::Shift
+PgUp::Ctrl
+
 !Numpad0::
 {
     global is_parentheses_free
