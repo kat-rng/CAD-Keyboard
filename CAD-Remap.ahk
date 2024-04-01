@@ -47,6 +47,9 @@ NumpadSub::
 PgDn::Shift
 PgUp::Ctrl
 
+Home::^y
+End::^z
+
     }
 }
 Launch_App2::
