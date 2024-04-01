@@ -86,6 +86,16 @@ Launch_App2::
     is_parentheses_free := 1
 }
 
+NumpadIns::
+{
+    Send "0"
+}
+
+NumpadDel::
+{
+    Send "."
+}
+
 NumpadEnd::
 {
     if(isTextFieldSelected()){
