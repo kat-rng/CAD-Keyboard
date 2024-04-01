@@ -17,37 +17,33 @@ keyset := "sketch"
 
 
 #HotIf RegExMatch(WinGetTitle('A'),"SOLIDWORKS")
+NumLock::
+{
+    global keyset
+    keyset := "sketch"
+    MsgBox("Sketching mode")
+}
+
 NumpadDiv::
 {
-    if(GetKeyState("NumLock", "T")) {
-        Send "/"
-    } else {
-        global keyset
-        keyset := "sketch"
-        MsgBox("Sketching mode")
-    }
+    global keyset
+    keyset := "model"
+    MsgBox("Modeling mode")
 }
 
 NumpadMult::
 {
-    if(GetKeyState("NumLock", "T")) {
-        Send "*"
-    } else {
-        global keyset
-        keyset := "model"
-        MsgBox("Modeling mode")
-    }
-
+    global keyset
+    keyset := "assembly"
+    MsgBox("Assembly mode")
 }
-
 NumpadSub::
 {
-    if(GetKeyState("NumLock", "T")) {
-        Send "-"
-    } else {
-        global keyset
-        keyset := "assembly"
-        MsgBox("Assembly mode")
+    global keyset
+    keyset := "draft"
+    MsgBox("Drafting mode")
+}
+
     }
 }
 Launch_App2::
