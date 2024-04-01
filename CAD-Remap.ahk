@@ -15,6 +15,8 @@ Key9map := Map("sketch", "^!+9", "model", "^+9", "assembly", "^!9", "draft", "+!
 is_parentheses_free := 1
 keyset := "sketch"
 
+
+#HotIf RegExMatch(WinGetTitle('A'),"SOLIDWORKS")
 NumpadDiv::
 {
     if(GetKeyState("NumLock", "T")) {
