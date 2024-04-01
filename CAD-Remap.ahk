@@ -1,4 +1,4 @@
-﻿#Requires AutoHotkey v2.0
+#Requires AutoHotkey v2.0
 
 ; Example structure for mapping keys
 ; Key1map := Map("sketch", "sketchkey", "model", "modelkey", "assembly", "assemblykey", "drafting", "draftingkey")
@@ -86,47 +86,178 @@ PgUp::Ctrl
     is_parentheses_free := 1
 }
 
-NumpadUp::
+NumpadEnd::
 {
-    Send Key8map[Keyset]
+    if(isTextFieldSelected()){
+        Send Key1map[Keyset]
+    }
+    else{
+        Send "1"
+    }
 }
-
-NumpadRight::
+Numpad1::
 {
-    Send Key6map[Keyset]
-}
-
-NumpadLeft::
-{
-    Send Key4map[Keyset]
+    if(isTextFieldSelected()){
+        Send Key1map[Keyset]
+    }
+    else{
+        Send "1"
+    }
 }
 
 NumpadDown::
 {
-    Send Key2map[Keyset]
+    if(isTextFieldSelected()){
+        Send Key2map[Keyset]
+    }
+    else{
+        Send "2"
+    }
 }
-
-NumpadClear::
+Numpad2::
 {
-    Send Key5map[Keyset]
+    if(isTextFieldSelected()){
+        Send Key2map[Keyset]
+    }
+    else{
+        Send "2"
+    }
 }
 
 NumpadPgDn::
 {
-    Send Key3map[Keyset]
+    if(isTextFieldSelected()){
+        Send Key3map[Keyset]
+    }
+    else{
+        Send "3"
+    }
+}
+Numpad3::
+{
+    if(isTextFieldSelected()){
+        Send Key3map[Keyset]
+    }
+    else{
+        Send "3"
+    }
 }
 
-NumpadPgUp::
+NumpadLeft::
 {
-    Send Key9map[Keyset]
+    if(isTextFieldSelected()){
+        Send Key4map[Keyset]
+    }
+    else{
+        Send "4"
+    }
+}
+Numpad4::
+{
+    if(isTextFieldSelected()){
+        Send Key4map[Keyset]
+    }
+    else{
+        Send "4"
+    }
 }
 
-NumpadEnd::
+NumpadClear::
 {
-    Send Key1map[Keyset]
+    if(isTextFieldSelected()){
+        Send Key5map[Keyset]
+    }
+    else{
+        Send "5"
+    }
+}
+Numpad5::
+{
+    if(isTextFieldSelected()){
+        Send Key5map[Keyset]
+    }
+    else{
+        Send "5"
+    }
+}
+
+NumpadRight::
+{
+    if(isTextFieldSelected()){
+        Send Key6map[Keyset]
+    }
+    else{
+        Send "6"
+    }
+}
+Numpad6::
+{
+    if(isTextFieldSelected()){
+        Send Key6map[Keyset]
+    }
+    else{
+        Send "6"
+    }
 }
 
 NumpadHome::
 {
-    Send Key7map[keyset] 
+    if(isTextFieldSelected()){
+        Send Key7map[Keyset]
+    }
+    else{
+        Send "7"
+    }
+}
+Numpad7::
+{
+    if(isTextFieldSelected()){
+        Send Key7map[Keyset]
+    }
+    else{
+        Send "7"
+    }
+}
+
+NumpadUp::
+{
+    if(isTextFieldSelected()){
+        Send Key8map[Keyset]
+    }
+    else{
+        Send "8"
+    }
+}
+Numpad8::
+{
+    if(isTextFieldSelected()){
+        Send Key8map[Keyset]
+    }
+    else{
+        Send "8"
+    }
+}
+
+NumpadPgUp::
+{
+    if(isTextFieldSelected()){
+        Send Key9map[Keyset]
+    }
+    else{
+        Send "9"
+    }
+}
+Numpad9::
+{
+    if(isTextFieldSelected()){
+        Send Key9map[Keyset]
+    }
+    else{
+        Send "9"
+    }
+}
+
+isTextFieldSelected()
+{
+	return !CaretGetPos()
 }
