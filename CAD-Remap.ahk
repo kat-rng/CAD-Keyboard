@@ -14,6 +14,7 @@ Key9map := Map("sketch", "^!+9", "model", "^+9", "assembly", "^!9", "draft", "+!
 
 is_parentheses_free := 1
 keyset := "sketch"
+lastarrow := "none"
 
 
 #HotIf RegExMatch(WinGetTitle('A'),"SOLIDWORKS")
@@ -50,19 +51,48 @@ PgUp::Ctrl
 Home::^y
 End::^z
 
-    }
-}
-Launch_App2::
++up::
 {
-    if(GetKeyState("NumLock", "T")) {
-        Send "{Launch_App2}"
-    } else {
-        global keyset
-        keyset := "draft"
-        MsgBox("Drafting mode")
+    global lastarrow
+    if(lastarrow="uparrow"){
+        send '^6'
+        lastarrow:="none"
+    }   else{
+        send '^5'
+        lastarrow:="uparrow"
     }
 }
 
++down::
+{
+    global lastarrow
+    if(lastarrow="downarrow"){
+        send '^2'
+        lastarrow:="none"
+    }   else{
+        send '^1'
+        lastarrow:="downarrow"
+    }
+}
+
++left::
+{
+    global lastarrow
+    send '^8'
+    lastarrow:="none"
+}
+
++right::
+{
+    global lastarrow
+    if(lastarrow="rightarrow"){
+        send '^3'
+        lastarrow:="none"
+    }   else{
+        send '^4'
+        lastarrow:="rightarrow"
+    }
+}
 
 !Numpad0::
 {
