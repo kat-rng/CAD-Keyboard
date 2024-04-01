@@ -44,6 +44,9 @@ NumpadSub::
     MsgBox("Drafting mode")
 }
 
+PgDn::Shift
+PgUp::Ctrl
+
     }
 }
 Launch_App2::
@@ -57,8 +60,6 @@ Launch_App2::
     }
 }
 
-PgDn::Shift
-PgUp::Ctrl
 
 !Numpad0::
 {
