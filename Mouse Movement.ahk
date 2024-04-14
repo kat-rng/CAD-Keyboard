@@ -1,6 +1,6 @@
 ﻿#Requires AutoHotkey v2.0
 
-Home::{
+#p::{
     global xdist
     global ydist
     MsgBox("mouse tracker running") 
@@ -24,13 +24,13 @@ Home::{
 }
 
 
-Insert::{
+`::{
     global xdist
     global ydist
     MsgBox("x: " xdist " y: " ydist) 
 }
 
-`::{
+~::{
     global xdist
     global ydist
     xdist := 0
